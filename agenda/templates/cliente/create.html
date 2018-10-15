@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form method="POST" action="create">
+    {% csrf_token %}
+    <div class="form-group">
+        <label >Apelido</label>    </br>
+        <input type="text" name="apelido" required="required"/>
+    </div>
+    </br>
+    <div class="form-group">
+        <label>Senha</label>    </br>
+        <input type="password" name="senha" required="required"/>
+    </div>
+</br>
+    <div class="form-group">
+        <label>Nome</label>    </br>
+        <input type="text" name="nome" required="required"/>
+    </div>
+</br>
+    <div class="form-group">
+        <label>E-mail</label>     </br>
+        <input type="text" name="email" required="required"/>
+    </div>
+</br>
+    <div class="form-group">
+        <label>Celular</label>     </br>
+        <input type="text" name="celular" required="required"/>
+    </div>
+</br>
+    <button href="cliente" type="submit"  class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-plus"></span> ADD</button>
+
+</form>
+{% endblock %}
